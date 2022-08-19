@@ -18,10 +18,13 @@ class _CampoTelaState extends State<CampoTela> {
   }
 
   void decrementPessoa() {
-    setState(() {
-      pessoa--;
-      debugPrint(pessoa.toString());
-    });
+    if (pessoa == 0) {
+    } else {
+      setState(() {
+        pessoa--;
+        debugPrint(pessoa.toString());
+      });
+    }
   }
 
   @override
